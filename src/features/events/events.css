@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background: #222324;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.14);
+    padding: 0rem 1rem 2rem 1rem;
+    min-height: 70vh;
+    height: 100vh; /* Fill viewport height */
+}
+
+#events.page {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-list {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#addEventBtn {
+    background: none;
+    border: none;
+    padding: 0.3em 0.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#addEventBtn svg {
+    display: block;
+}
+
+#addEventBtn,
+#addEventBtn .icon-plus {
+    color: #fff; /* or #eee for soft white, or #ccc for grey */
+}
+
+.event-list {
+    color: #fff; /* or #eee/#ccc for a softer white/grey */
+}
+
+.event-chevron {
+    color: inherit;    /* Inherit from .event-list */
+    font-size: 1.2em;
+    margin-left: 0.5em;
+}
+.event-list-toolbar {
+    display: flex;
+    align-items: center;
+}
+
+.event-list-toolbar input[type="text"] {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.add-event-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* or #eee/#ccc for grey/soft white */
+}
+
+.add-event-btn .icon-plus {
+    color: inherit;
+}
+
+.form-section {
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.date-time-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.recurrence-pattern, .recurrence-end {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #292b2c;
+    border-radius: 6px;
+}
+
+.event-list-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#eventSearch {
+    flex: 1;
+}
+
+.filter-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
