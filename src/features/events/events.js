@@ -25,7 +25,7 @@ let rsvps = {}; // { eventId: [name, name, ...] }
 let showPastEvents = false; // Global state
 
 async function showEventsList() {
-    await renderComponent('../src/features/events/pages/EventsList.html');
+    await renderComponent('src/features/events/pages/EventsList.html');
     document.getElementById('togglePastEvents').onclick = function() {
         showPastEvents = !showPastEvents;
         this.textContent = showPastEvents ? "Show Upcoming Events" : "Show Past Events";
@@ -89,7 +89,7 @@ function filterEvents() {
 async function showEventDetails(eventId) {
     currentEvent = events.find(ev => ev.id === eventId);
     if (!currentEvent) return;
-    await renderComponent('../src/features/events/pages/EventDetails.html');
+    await renderComponent('src/features/events/pages/EventDetails.html');
 
     // Set event meta info
     document.getElementById('eventTitle').textContent = currentEvent.name;
@@ -150,7 +150,7 @@ function renderRsvps() {
 }
 
 async function showNeedPage() {
-    await renderComponent('../src/features/events/pages/NeedTicket.html');
+    await renderComponent('src/features/events/pages/NeedTicket.html');
     // Fill ticket types
     const sel = document.getElementById('needTicketType');
     sel.innerHTML = '';
@@ -166,7 +166,7 @@ async function showNeedPage() {
 }
 
 async function showAddEventPage() {
-    await renderComponent('../src/features/events/pages/AddEvent.html');
+    await renderComponent('src/features/events/pages/AddEvent.html');
     document.getElementById('backToEventsBtnAdd').onclick = showEventsList;
     initGooglePlacesAutocomplete();
 
@@ -344,7 +344,7 @@ function renderPurchases() {
 }
 
 async function showPurchasePage() {
-    await renderComponent('../src/features/events/pages/PurchaseTickets.html');
+    await renderComponent('src/features/events/pages/PurchaseTickets.html');
     // Fill ticket types
     const sel = document.getElementById('purchaseTicketType');
     sel.innerHTML = '';
@@ -419,7 +419,7 @@ function formatEventDateTime(start, end) {
 async function showEditEventPage(eventId) {
     const eventToEdit = events.find(ev => ev.id === eventId);
     if (!eventToEdit) return;
-    await renderComponent('../src/features/events/pages/AddEvent.html');
+    await renderComponent('src/features/events/pages/AddEvent.html');
     document.getElementById('backToEventsBtnAdd').onclick = showEventsList;
 
     // Pre-fill form fields
